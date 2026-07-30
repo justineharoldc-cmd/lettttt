@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Story | Pampanga ⇄ Panabo</title>
+<title>Our Story | Panabo ⇄ Pampanga</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -27,7 +27,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-/* --- Header & Navigation --- */
+
 header {
     position: fixed;
     top: 0;
@@ -130,7 +130,6 @@ header.scrolled {
     font-weight: 300;
 }
 
-/* --- Interactive Love Note Box --- */
 .daily-note-box {
     background: rgba(255, 255, 255, 0.03);
     border-left: 3px solid #ff4b6e;
@@ -162,7 +161,6 @@ header.scrolled {
 
 .shuffle-btn:hover { text-decoration: underline; }
 
-/* --- Stats Banner --- */
 .stats-banner {
     display: flex;
     gap: 16px;
@@ -200,7 +198,6 @@ header.scrolled {
     margin-top: 2px;
 }
 
-/* --- Buttons --- */
 .buttons {
     display: flex;
     gap: 14px;
@@ -242,7 +239,6 @@ header.scrolled {
     transform: translateY(-2px);
 }
 
-/* --- Gallery Rows --- */
 #gallery {
     position: relative;
     z-index: 10;
@@ -275,7 +271,7 @@ header.scrolled {
 .row::-webkit-scrollbar { display: none; }
 .row { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* --- Cards & Like Feature --- */
+/* basta cards */
 .card {
     flex: 0 0 auto;
     width: 230px;
@@ -365,7 +361,6 @@ header.scrolled {
     border: 1px solid rgba(255, 75, 110, 0.3);
 }
 
-/* --- Floating Letter Button --- */
 .floating-letter-btn {
     position: fixed;
     bottom: 30px;
@@ -390,7 +385,6 @@ header.scrolled {
     transform: scale(1.1);
 }
 
-/* --- Lightbox Modal --- */
 .modal {
     position: fixed;
     inset: 0;
@@ -470,7 +464,6 @@ header.scrolled {
 
 .modal-close:hover { color: #ff4b6e; }
 
-/* --- Footer --- */
 footer {
     padding: 50px 20px;
     text-align: center;
@@ -479,7 +472,6 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* --- Mobile Responsiveness --- */
 @media(max-width: 768px) {
     header, header.scrolled { padding: 15px 20px; }
     .hero { padding: 80px 20px 40px; }
@@ -495,7 +487,7 @@ footer {
 <body>
 
 <header id="main-header">
-    <div class="logo">Pampanga ⇄ Panabo</div>
+    <div class="logo">Panabo ⇄ Pampanga</div>
     <div class="ldr-badge">⚡ 1,020 KM Connected</div>
 </header>
 
@@ -504,10 +496,10 @@ footer {
         <div class="hero-subtitle">fRMT,MD × IT Developer</div>
         <h1>3 Months of Us</h1>
         <p>
-            From meeting on Umingle to late-night VCs after your classes and duties in University of the Immaculate Conception and Tagum City. Distance is just temporary—our story is just getting started.
+            From meeting on Umingle to late-night VCs after your classes and duties in University of the Immaculate Conception and Tagum City. Distance is just temporary, our story is just getting started. ;)
         </p>
 
-        <!-- Love Note Box -->
+        <!-- lab notez -->
         <div class="daily-note-box">
             <div class="daily-note-text" id="loveNote">
                 "Distance means so little when someone means so much."
@@ -515,7 +507,6 @@ footer {
             <button class="shuffle-btn" onclick="shuffleNote()">Your bf's lines! Click me!</button>
         </div>
 
-        <!-- Dynamic LDR Stats Widget -->
         <div class="stats-banner">
             <div class="stat-card">
                 <div class="label">Status</div>
@@ -544,12 +535,11 @@ footer {
 
 <div id="gallery"></div>
 
-<!-- Floating Action Button for Special Letter -->
 <button class="floating-letter-btn" onclick="openLetterModal()" title="Open Message">
     💌
 </button>
 
-<!-- Modal Dialog -->
+
 <div class="modal" id="photoModal">
     <span class="modal-close" onclick="closeModal()">&times;</span>
     <div class="modal-content">
@@ -568,12 +558,11 @@ footer {
 </footer>
 
 <script>
-// Love Notes Generator
 const notes = [
     '"I love you so much, baby!"',
     '"Study well, baby!"',
     '"Take care palagi!"',
-    '"Huwag kalimutan kumain!"',
+    '"Huwag kalimutan kumain! :)"',
     '"Rest ka muna, baby."',
     '"Proud of you every single day in your hospital duty, my future MedTech! 🩺"',
     '"Mahal na mahal kita, alam mo yan!"',
@@ -586,14 +575,14 @@ function shuffleNote() {
     document.getElementById("loveNote").innerText = randomNote;
 }
 
-// Scroll header effect
+
 const header = document.getElementById("main-header");
 window.addEventListener("scroll", () => {
     if (window.scrollY > 40) header.classList.add("scrolled");
     else header.classList.remove("scrolled");
 });
 
-// Netflix-style Collections
+
 const collections = [
     {
         title: "Season 1: Courting Days & Late VCs 📱",
@@ -643,7 +632,7 @@ const collections = [
                 img: "images/23A90079-D277-4B25-9E74-2DE01EF1A23C.JPG", 
                 title: "Campus Days", 
                 date: "School Grounds",
-                desc: "The quiet spots between lectures where all the studying, memories, and coffee runs happen."
+                desc: "The quiet spots between lectures where all the studying, memories, and ''coffee needed'' happen."
             },
             { 
                 img: "images/73C72EDC-CD08-4BB7-AA68-AAAB8D11FD12.JPG", 
@@ -745,7 +734,6 @@ Lahat mararanasan`
 
 const container = document.getElementById("gallery");
 
-// Render photo cards dynamically
 collections.forEach((collection) => {
     const sec = document.createElement("div");
     sec.className = "section";
@@ -786,14 +774,12 @@ collections.forEach((collection) => {
     container.appendChild(sec);
 });
 
-// Card Like Button Toggle
 function toggleLike(event, element) {
     event.stopPropagation();
     element.classList.toggle('liked');
     element.innerText = element.classList.contains('liked') ? '💖' : '🤍';
 }
 
-// Modal Controls
 const modal = document.getElementById("photoModal");
 const modalImg = document.getElementById("modalImg");
 const modalTitle = document.getElementById("modalTitle");
